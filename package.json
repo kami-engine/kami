@@ -1,0 +1,37 @@
+{
+  "name": "@kami-engine/kami",
+  "version": "0.1.0",
+  "description": "Kami game engine built with TypeScript on top of Love2D.",
+  "files": [
+    "dist/**/*.lua",
+    "dist/**/*.d.ts"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index",
+  "scripts": {
+    "prepare": "tstl -p tsconfig.build.json",
+    "build": "tstl -p tsconfig.build.json",
+    "clean-tests": "rimraf ./tests_out",
+    "build-tests": "pnpm clean-tests && tstl -p tsconfig.tests.json",
+    "prettier": "prettier --check ./tests ./src",
+    "lint": "eslint ./tests ./src",
+    "test": "pnpm build-tests && busted",
+    "test-dev": "pnpm build-test && busted --run=devUnit"
+  },
+  "keywords": [],
+  "author": "Jurmerlo",
+  "license": "MIT",
+  "devDependencies": {
+    "@kami-engine/eslint-config": "github:kami-engine/eslint-config",
+    "@kami-engine/prettier-config": "github:kami-engine/prettier-config",
+    "@typescript-to-lua/language-extensions": "^1.19.0",
+    "busted-tstl": "0.1.2-rc.0",
+    "eslint": "^9.25.1",
+    "love-typescript-definitions": "^11.5.0",
+    "lua-types": "^2.13.1",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "typescript-to-lua": "^1.31.0"
+  }
+}
