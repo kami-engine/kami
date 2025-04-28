@@ -1,0 +1,29 @@
+{
+  "name": "basic-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tstl",
+    "lint": "eslint ./src",
+    "prettier": "prettier --check ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.9.0",
+  "devDependencies": {
+    "@kami-engine/eslint-config": "github:kami-engine/eslint-config",
+    "@kami-engine/prettier-config": "github:kami-engine/prettier-config",
+    "@typescript-to-lua/language-extensions": "^1.19.0",
+    "eslint": "^9.25.1",
+    "love-typescript-definitions": "^11.5.0",
+    "lua-types": "^2.13.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-to-lua": "^1.31.0"
+  },
+  "dependencies": {
+    "@kami-engine/kami": "link:../../.."
+  }
+}

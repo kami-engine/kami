@@ -1,0 +1,5 @@
+
+[love.window]
+title = "Basic Game"
+width = 480
+height = 800

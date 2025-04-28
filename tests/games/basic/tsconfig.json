@@ -8,20 +8,25 @@
       "love-typescript-definitions",
       "@typescript-to-lua/language-extensions",
       "lua-types/5.1",
-      "busted-tstl"
     ],
+    "outDir": "export",
     "strict": true,
-    "outDir": "dist",
     "noImplicitOverride": true,
-    "declaration": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"]
+    },
   },
-  "include": ["./src", "./tests"],
+  "include": ["src"],
   "exclude": ["node_modules", "export"],
   "tstl": {
     "luaLibImport": "require-minimal",
     "luaTarget": "universal",
-    "buildMode": "library",
+    "noResolvePaths": ["lldebugger"],
+    "sourceMapTraceback": true
   }
 }
