@@ -1,11 +1,11 @@
-import { inject, Services } from '../../../src';
+import { inject, Services } from '../../../src/di';
 
 describe('di/inject tests:', () => {
   teardown(() => {
     Services.clear();
   });
 
-  it('#dev should inject a service.', () => {
+  it('should inject a service.', () => {
     const value = 'this is a test';
     const testService = new TestService(value);
     Services.add(TestService, testService);

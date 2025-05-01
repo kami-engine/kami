@@ -16,7 +16,7 @@ class TestService2 {
   }
 }
 
-describe('di/services tests:', () => {
+describe('di/services:', () => {
   before_each(() => {
     Services.clear();
   });
